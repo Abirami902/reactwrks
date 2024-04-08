@@ -1,0 +1,115 @@
+//App .js
+
+import logo from './logo.svg';
+import './App.css';
+
+function App(){
+  return(
+<div className='grid'>
+  <div className='item1'>
+    <img src="adam.jpeg" alt="adam" className='j1' />
+     <h3>Adam Jonson</h3>
+     <h4>Developer</h4>
+    </div>
+    <div className='item1'>
+    <img src="linda.jpg" alt="linda" className='j1'/>
+     <h3>Linda Larson</h3>
+     <h4>Manager</h4>
+    </div>
+    <div className='item1'>
+    <img src="marry.jpeg" alt="marry" className='j1'/>
+     <h3>Marry Hudson</h3>
+     <h4>Designer</h4>
+    </div>
+    <div className='item1'>
+    <img src="nina.jpeg" alt="nina" className='j1'/>
+     <h3>Nina Hudson</h3>
+     <h4>Designer</h4>
+    </div>
+    <div className='item1'>
+    <img src="margo.jpeg" alt="mar" className='j1'/>
+     <h3>Margo Larson</h3>
+     <h4>Manager</h4>
+    </div>
+    <div className='item1'>
+    <img src="nicole.jpeg" alt="nico" className='j1'/>
+     <h3>Nicole scavo</h3>
+     <h4>Manager</h4>
+    </div>
+
+</div>
+  );
+}
+export default App;
+
+
+//App.css
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.j1{
+  height: 150px;
+  width: 150px;
+  border-radius: 150px;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+
+.grid{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-left: 200px;
+}
+
+.item1{
+ 
+  height: 330px;
+  width: 300px;
+  background-color:white ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+}
+
+.item1:hover{
+  background-color: rgb(206, 193, 193);
+}
