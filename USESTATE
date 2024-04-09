@@ -1,0 +1,257 @@
+// //state in react
+//USE STATE 1
+
+import { useState } from "react";
+
+
+function App() {
+
+  const [count,setCount] = useState('Hi')
+
+  const[c,d] = useState('react')
+
+  const [a,b] = useState('cart')
+
+  return (
+    <div>
+
+      {count}
+      <br/>
+
+      {a}
+      <br/>
+
+      {c}
+      <br/>
+
+    </div>
+  );
+}
+
+export default App;
+
+import { useState } from "react";
+
+function App(){
+
+const[count,setcount] = useState('nice')
+
+const[a,c] = useState('to')
+
+const[b,d] = useState('meet you')
+
+
+  return(
+
+<div>
+
+  {count}
+
+  <br/>
+
+  {a}
+
+  <br/>
+
+{b}
+
+</div>
+
+
+  );
+}
+export default App;
+
+//ARRAY OBJECT FUNCTION
+
+
+import { useState } from "react";
+
+
+function App() {
+
+
+  const [profileName,setProfileName] = useState('aami')
+  const [profileAge,setProfileAge] = useState(23)
+  const [profileplace,setProfileplace] = useState('kozhikode')
+  const[profiledob,setprofiledob] = useState('25')
+//with in function
+
+
+  const [profile,setProfile] = useState({
+    name:'abhi',
+    age:24,
+    course:'phd',
+    year:5,
+    under:'kp'
+
+  })
+
+  const[student,setstudent]=useState({
+    Name:'dilu',
+    Age:23,
+    Course:'mentor',
+    Year:2,
+    Under:'xylem'
+  })
+
+  const [pro,setpro]=useState({
+    hi:'abhi'
+  })
+
+  //object
+
+   const [fruits,setFruits]= useState(['mango','orange','pineapple','cherry','apple'])
+   const [room,setroom]=useState(['fan','ac','remort','chair','desk'])
+   
+    //Array
+  return (
+    <div>
+
+        {profileName}<br/>
+      {profileAge}<br/>
+      {profileplace}<br/>
+      {profiledob}
+       
+//  with in function 
+
+
+     {profile.name}<br/>
+     {profile.age} <br/>
+     {profile.course} <br/>
+     {profile.year} <br/>
+     {profile.under} <br/>
+
+     {student.Name}<br/>
+     {student.Age} <br/>
+     {student.Course} <br/>
+     {student.Year} <br/>
+     {student.Under} <br/>
+
+     {pro.hi} 
+
+{/*     object  */}
+
+  {fruits[0]}<br/>
+ {fruits[1]}<br/>
+{fruits[2]}<br/>
+{fruits[3]}<br/> 
+
+// normal array value retrive 
+
+
+{fruits.map((item)=>{   
+       return(
+       <div>
+        {item}
+       </div>
+ )
+ })
+ } 
+ {
+   room.map((item)=>{
+     return(
+       <div>
+         {item}
+         </div>
+     )
+   }
+  //ARRAY
+   )
+ }
+
+   </div>
+
+   );
+ }
+
+ export default App;
+
+
+//state , counter code
+
+//counter sir
+
+import React,{useState} from 'react'
+
+function App() {
+
+
+  const [count,setCount] = useState(1000)
+
+  const increment = ()=>{
+          setCount(count+1)
+  }
+  const decrement = ()=>{
+     if(count === 0){
+      setCount(1000)
+     }else{
+
+       setCount(count-1)
+     }
+  }
+
+  const reset = ()=>{
+    setCount(1000)
+  }
+
+  return (
+    <div> 
+
+
+       <p>Counter</p>
+       {count}
+
+       <button onClick={increment} >+</button>
+       <button onClick={decrement}>-</button>
+       <button onClick={reset}>Reset</button>
+    </div>
+  )
+}
+ export default App;
+
+//counter 2
+
+import React,{useState} from 'react'
+
+function App(){
+
+  const [count,setCount]=useState(500)
+
+  const plus=()=>
+
+{
+  setCount(count+1)
+}
+
+const minus=()=>
+{
+  if(count == 0)
+  setCount(1000)
+else
+  setCount(count-1)
+}
+
+const Reset=()=>{
+  setCount(500)
+}
+
+return(
+<div>
+
+<p>counter</p>
+
+{count}
+
+<button onClick={plus}>+</button>
+<button onClick={minus}>-</button>
+<button onClick={Reset}>Reset</button>
+
+
+</div>
+
+)
+
+}
+
+export default App;
